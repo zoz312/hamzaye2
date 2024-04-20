@@ -6,7 +6,7 @@ import 'package:hamzawyapp/features/auth/NewPassword/view/component/text1.dart';
 import 'package:hamzawyapp/features/auth/NewPassword/view/component/text2.dart';
 
 import '../../../../../core/image1.dart';
-import '../../../login/view/component/TextFormFieldPassword.dart';
+
 import 'buttonnewpass.dart';
 
 class bodynewpass extends StatelessWidget {

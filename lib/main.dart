@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hamzawyapp/features/auth/ForgetPasswod/view/page/forget.dart';
+//import 'package:hamzawyapp/features/auth/ForgetPasswod/view/page/forget.dart';
 import 'package:hamzawyapp/features/auth/OnBording/view/page/OnBording.dart';
-import 'package:hamzawyapp/features/auth/login/view/page/LoginPage.dart';
+//import 'package:hamzawyapp/features/auth/login/view/page/LoginPage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:hamzawyapp/core/validation.dart';
 import 'package:hamzawyapp/features/auth/NewPassword/view/page/NewPassword.dart';
@@ -37,10 +37,10 @@ class Myroute {
  static Route<dynamic>  onGenerateRoute (RouteSettings settings){
     switch(settings.name){
       case 'create': return  MaterialPageRoute<dynamic>(builder: (BuildContext context) => const CreateAccount());
-      case 'login': return    MaterialPageRoute<dynamic>(builder: (BuildContext context) =>  Login());
+      //case 'login': return    MaterialPageRoute<dynamic>(builder: (BuildContext context) =>  Login());
       case 'newpass': return    MaterialPageRoute<dynamic>(builder: (BuildContext context) => NewPassword());
        case 'ver': return   MaterialPageRoute<dynamic>(builder: (BuildContext context) => verification_page());
-  case'forget':  return  MaterialPageRoute<dynamic>(builder: (BuildContext context) =>  forget());
+  //case'forget':  return  MaterialPageRoute<dynamic>(builder: (BuildContext context) =>  forget());
   default:  return  MaterialPageRoute<dynamic>(builder: (BuildContext context) => const OnBording());
   
   

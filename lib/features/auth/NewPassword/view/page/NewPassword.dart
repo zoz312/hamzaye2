@@ -5,7 +5,7 @@ import 'package:hamzawyapp/features/auth/NewPassword/view/component/bodynewpass.
 import 'package:hamzawyapp/features/auth/NewPassword/view/component/buttonnewpass.dart';
 import 'package:hamzawyapp/features/auth/NewPassword/view/component/text1.dart';
 import 'package:hamzawyapp/features/auth/NewPassword/view/component/text2.dart';
-import 'package:hamzawyapp/features/auth/login/view/component/TextFormFieldPassword.dart';
+
 
 import '../../../../../core/TextFormFieldPassword.dart';
 import '../../../../../core/image1.dart';

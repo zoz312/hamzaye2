@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hamzawyapp/features/auth/NewPassword/controller/cubit/newpass_cubit.dart';
 import 'package:hamzawyapp/features/auth/NewPassword/view/page/NewPassword.dart';
-import 'package:hamzawyapp/features/auth/login/controller/cubit/login_cubit.dart';
-import 'package:hamzawyapp/features/auth/login/view/page/LoginPage.dart';
+
+
 
 import '../../../../../core/MyVaidPass.dart';
 
