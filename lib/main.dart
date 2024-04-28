@@ -17,7 +17,6 @@ void main() async {
   bool onbording = sharedpreferences.getBool('onbording') ?? false;
   MaterialApp materialapp = MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: onbording ?  Login() :const OnBording(),
       onGenerateRoute:Myroute.onGenerateRoute ,
       onGenerateInitialRoutes:(_)=> Myroute.initr
        );
