@@ -6,7 +6,7 @@ class text1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Text("Password must be at least 8 characters long.Password must contain at least one upper case.One lower case letter.Password must contain at least one number or special character"
-    ,style: TextStyle(fontSize: 22),)
+    ,style: TextStyle(fontSize: MediaQuery.of(context).size.height/20),)
             ;
   }
 }

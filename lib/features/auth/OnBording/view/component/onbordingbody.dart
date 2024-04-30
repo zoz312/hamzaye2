@@ -29,7 +29,7 @@ class bodyOnbording extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                        width: 300,
+                        width: MediaQuery.of(context).size.width/2 ,
                         child: Image.asset(controller.data[index].image)),
                     SizedBox(
                       height: 30,

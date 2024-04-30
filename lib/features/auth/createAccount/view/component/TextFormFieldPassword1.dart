@@ -56,6 +56,7 @@ class TextFormFieldPassword1 extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10)),
                 hintText: "Enter your Password"),
             validator: PassVaild().myVaild,
+            strutStyle: StrutStyle(height:MediaQuery.of(context).size.height/500 ),
           );
         },
       ),

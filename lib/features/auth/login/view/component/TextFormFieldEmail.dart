@@ -22,6 +22,7 @@ class TextFormFieldEmail2 extends StatelessWidget {
             ],
             controller: controller.email,
             autovalidateMode: AutovalidateMode.onUserInteraction,
+            strutStyle: StrutStyle(height:MediaQuery.of(context).size.height/500 ),
             decoration: InputDecoration(
                 label: Text("Email"),
                 labelStyle: TextStyle(color: Colors.black, fontSize: 20),

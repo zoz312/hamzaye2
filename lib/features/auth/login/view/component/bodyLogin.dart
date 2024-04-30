@@ -9,7 +9,7 @@ import 'package:hamzawyapp/features/auth/login/view/page/LoginPage.dart';
 import '../../../../../core/TextFormFieldEmail.dart';
 import '../../../../../core/TextFormFieldPassword.dart';
 import '../../../../../core/TextFormFieldPhone.dart';
-import '../../../../../core/image1.dart';
+import 'image1.dart';
 import 'TextFormFieldPassword.dart';
 import 'buttonForget.dart';
 import 'buttonLogin.dart';
@@ -31,7 +31,7 @@ class bodyLogin extends StatelessWidget {
                 Form(
                     child: ListView(
                   children: [
-                    image1(),
+                    image3(),
                     TextFormFieldPhone2(controller: controller,),
                     const SizedBox(
                       height: 20.0,
@@ -47,8 +47,8 @@ class bodyLogin extends StatelessWidget {
                       height: 10.0,
                     ),
                     LoginButton(),
-                    const SizedBox(
-                      height: 10.0,
+                     SizedBox(
+                     height:MediaQuery.of(context).size.height/30, 
                     ),
                     RowLogin()
                   ],
@@ -56,10 +56,10 @@ class bodyLogin extends StatelessWidget {
                 Form(
                     child: ListView(
                   children: [
-                    image1(),
+                    image3(),
                     TextFormFieldEmail2(controller: controller,),
-                    const SizedBox(
-                      height: 20.0,
+                     SizedBox(
+                      height:MediaQuery.of(context).size.height/30, 
                     ),
                     TextFormFieldPassword2(text: "Password",controller: controller,),
                     Row(
@@ -68,12 +68,12 @@ class bodyLogin extends StatelessWidget {
                         forgetButton(),
                       ],
                     ),
-                    const SizedBox(
-                      height: 10.0,
+                     SizedBox(
+                      height:MediaQuery.of(context).size.height/30, 
                     ),
                     LoginButton(),
-                    const SizedBox(
-                      height: 20.0,
+                     SizedBox(
+                      height:MediaQuery.of(context).size.height/30, 
                     ),
                     RowLogin()
                   ],

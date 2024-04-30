@@ -4,7 +4,7 @@ import 'package:hamzawyapp/features/auth/ForgetPasswod/controller/cubit/forgetpa
 
 import '../../../../../core/PhoneVild.dart';
 import '../../../../../core/TextFormFieldPhone.dart';
-import '../../../../../core/image1.dart';
+import '../../../login/view/component/image1.dart';
 import 'buttonForgetcon.dart';
 
 class bodyFoget extends StatelessWidget {
@@ -22,10 +22,8 @@ class bodyFoget extends StatelessWidget {
             child: Form(
                 child: ListView(
               children: [
-                SizedBox(
-                  height: 120,
-                ),
-                image1(),
+                
+                image3(),
                 Text(
                   "Don't worry ! It happens. Please enter the phone number we will send the OTP in this Phone Number.",
                   style: TextStyle(fontSize: 25),

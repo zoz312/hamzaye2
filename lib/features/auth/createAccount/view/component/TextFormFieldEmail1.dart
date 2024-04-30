@@ -15,6 +15,7 @@ class TextFormFieldEmail1 extends StatelessWidget {
       child: BlocBuilder<CreateAccountCubit, CreateAccountState>(
         builder: (context, state) {
           return TextFormField(
+            
             inputFormatters: [
               FilteringTextInputFormatter.allow(RegExp(
                   r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+com"))
@@ -39,7 +40,7 @@ class TextFormFieldEmail1 extends StatelessWidget {
                 border: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: const Color(0xffD84012),
-                      width: 3,
+                      width: 1,
                     ),
                     borderRadius: BorderRadius.circular(10)),
                 focusedBorder: OutlineInputBorder(
@@ -56,6 +57,8 @@ class TextFormFieldEmail1 extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10)),
                 hintText: "Enter your email"),
             validator: EmailVaild().myVaild,
+          
+           strutStyle: StrutStyle(height:MediaQuery.of(context).size.height/500 ),
           );
         },
       ),

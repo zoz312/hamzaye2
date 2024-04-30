@@ -52,6 +52,7 @@ class TextFormFieldPhone1 extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10)),
                 hintText: "Enter your phone number"),
             validator: PhoneVaild().myVaild,
+            strutStyle: StrutStyle(height:MediaQuery.of(context).size.height/500 ),
           );
         },
       ),

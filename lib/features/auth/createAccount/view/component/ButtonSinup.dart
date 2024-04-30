@@ -19,7 +19,7 @@ class  ButtonSinup extends StatelessWidget {
           style:ButtonStyle(
               backgroundColor:MaterialStatePropertyAll( Color(0xffD84012)),
              
-              padding:MaterialStatePropertyAll( EdgeInsets.symmetric(horizontal: 100, vertical: 11)),
+              padding:MaterialStatePropertyAll( EdgeInsets.symmetric(horizontal:MediaQuery.of(context).size.width/30 , vertical:MediaQuery.of(context).size.height/80)),
               shape:MaterialStatePropertyAll( RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50))))),
     )

@@ -8,7 +8,7 @@ import 'package:hamzawyapp/features/auth/NewPassword/view/component/text2.dart';
 
 
 import '../../../../../core/TextFormFieldPassword.dart';
-import '../../../../../core/image1.dart';
+import '../../../login/view/component/image1.dart';
 
 class NewPassword extends StatelessWidget {
   const NewPassword({super.key});

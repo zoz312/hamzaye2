@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hamzawyapp/core/TextFormFieldPhone.dart';
-import 'package:hamzawyapp/core/image1.dart';
+import 'package:hamzawyapp/features/auth/login/view/component/image1.dart';
 import 'package:hamzawyapp/features/auth/ForgetPasswod/controller/cubit/forgetpassword_cubit.dart';
 import 'package:hamzawyapp/features/auth/ForgetPasswod/view/component/bodyForget.dart';
 import 'package:hamzawyapp/features/auth/ForgetPasswod/view/component/buttonForgetcon.dart';

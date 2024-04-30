@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hamzawyapp/features/auth/createAccount/view/component/TextFormFieldPhone1.dart';
-
+import 'package:flutter/widgets.dart';
 import '../../../../../core/TextFormFieldEmail.dart';
 import '../../../../../core/TextFormFieldPassword.dart';
 import '../../../../../core/TextFormFieldPhone.dart';
-import '../../../../../core/image1.dart';
+import '../../../login/view/component/image1.dart';
 import '../../controller/cubit/create_account_cubit.dart';
 import 'ButtonSinup.dart';
 import 'TextFormFieldEmail1.dart';
@@ -21,59 +21,64 @@ class BodyCreateAccount extends StatelessWidget {
       value: controller,
       child: BlocBuilder<CreateAccountCubit, CreateAccountState>(
         builder: (context, state) {
-          return ListView(
-            children: [
-              image1(),
-              TextFormFieldName(
-                controller: controller,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              TextFormFieldPhone1(
-                controller: controller,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              TextFormFieldEmail1(
-                controller: controller,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              TextFormFieldPassword1(
-                text: "Password",
-                controller: controller,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ButtonSinup(),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "have an Account ?",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, 'login');
-                      },
-                      child: Text(
-                        "Login",
-                        style: TextStyle(
-                            fontSize: 18,
-                            color: Color(0xffD84012),
-                            decoration: TextDecoration.underline),
-                      ))
-                ],
-              )
-            ],
+          return Padding(
+            padding:  EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width/100),
+            child: ListView(
+              children: [
+             //   Text("${MediaQuery.of(context).size.width}"),
+                SizedBox(height: MediaQuery.of(context).size.height/7 ,),
+                TextFormFieldName(
+                  controller: controller,
+                ),
+                SizedBox(
+                 height: MediaQuery.of(context).size.height/40,
+                 
+                ),
+                TextFormFieldPhone1(
+                  controller: controller,
+                ),
+                SizedBox(
+                   height: MediaQuery.of(context).size.height/40,
+                ),
+                TextFormFieldEmail1(
+                  controller: controller,
+                ),
+                SizedBox(
+                   height: MediaQuery.of(context).size.height/40
+                ),
+                TextFormFieldPassword1(
+                  text: "Password",
+                  controller: controller,
+                ),
+                SizedBox(
+                 height: MediaQuery.of(context).size.height/40
+                ),
+                ButtonSinup(),
+                SizedBox(
+                 height: MediaQuery.of(context).size.height/80
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "have an Account ?",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'login');
+                        },
+                        child: Text(
+                          "Login",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Color(0xffD84012),
+                              decoration: TextDecoration.underline),
+                        ))
+                  ],
+                )
+              ],
+            ),
           );
         },
       ),

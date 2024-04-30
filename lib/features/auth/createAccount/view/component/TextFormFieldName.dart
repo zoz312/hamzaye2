@@ -9,15 +9,14 @@ class TextFormFieldName extends StatelessWidget {
   CreateAccountCubit controller;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 5),
-      child: BlocProvider(
+    return  BlocProvider(
         create: (context) => CreateAccountCubit(),
         child: BlocBuilder<CreateAccountCubit, CreateAccountState>(
           builder: (context, state) {
             return TextFormField(
               controller: controller.phone,
               autovalidateMode: AutovalidateMode.onUserInteraction,
+              strutStyle: StrutStyle(height:MediaQuery.of(context).size.height/500 ),
               decoration: InputDecoration(
                   label: Text("Name"),
                   labelStyle: TextStyle(color: Colors.black, fontSize: 20),
@@ -56,7 +55,7 @@ class TextFormFieldName extends StatelessWidget {
             );
           },
         ),
-      ),
+     
     );
   }
 }

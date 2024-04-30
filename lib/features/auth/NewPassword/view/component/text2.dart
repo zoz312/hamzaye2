@@ -5,7 +5,7 @@ class text2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("NEW CREDENTIALS",style: TextStyle(fontSize: 30),)
+    return Text("NEW CREDENTIALS",style: TextStyle(fontSize: MediaQuery.of(context).size.height/15),)
            
             ;
   }

@@ -1,13 +1,12 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 //import 'package:hamzawyapp/features/auth/ForgetPasswod/view/page/forget.dart';
 import 'package:hamzawyapp/features/auth/OnBording/view/page/OnBording.dart';
-//import 'package:hamzawyapp/features/auth/login/view/page/LoginPage.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:hamzawyapp/core/validation.dart';
+import 'package:hamzawyapp/features/auth/dashboard/view/page/Dashboard.dart';
 import 'package:hamzawyapp/features/auth/NewPassword/view/page/NewPassword.dart';
 import 'package:hamzawyapp/features/auth/createAccount/view/page/CreateAccount.dart';
 import 'package:hamzawyapp/features/auth/verification/view/page/verification.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
 import 'features/auth/ForgetPasswod/view/page/forget.dart';
 import 'features/auth/login/view/page/LoginPage.dart';
 
@@ -17,10 +16,19 @@ void main() async {
   bool onbording = sharedpreferences.getBool('onbording') ?? false;
   MaterialApp materialapp = MaterialApp(
       debugShowCheckedModeBanner: false,
-      onGenerateRoute:Myroute.onGenerateRoute ,
-      onGenerateInitialRoutes:(_)=> Myroute.initr
+     builder:DevicePreview.appBuilder ,
+    // useInheritedMediaQuery: true,
+    //  onGenerateRoute:Myroute.onGenerateRoute ,
+ //     onGenerateInitialRoutes:(_)=> Myroute.initr
+    home: Dashboard(),
        );
-  runApp(materialapp);
+   runApp(//DevicePreview(
+     // enabled: true,
+     
+     // builder: (context) => 
+       materialapp ,
+   // ),
+    );
 }
 
 

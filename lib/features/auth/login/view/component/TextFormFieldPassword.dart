@@ -18,6 +18,7 @@ class TextFormFieldPassword2 extends StatelessWidget {
       child: BlocBuilder<LoginCubit, LoginState>(
         builder: (context, state) {
           return TextFormField(
+            strutStyle: StrutStyle(height:MediaQuery.of(context).size.height/500 ),
             controller: controller.password,
             autovalidateMode: AutovalidateMode.onUserInteraction,
             obscureText: true,

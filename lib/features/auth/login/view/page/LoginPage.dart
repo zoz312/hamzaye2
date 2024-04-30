@@ -27,7 +27,7 @@ class Login extends StatelessWidget {
                       labelColor: Color(0xffFFF2BC),
                       unselectedLabelColor: Color(0xffFFF2BC),
                       indicatorColor: Color(0xffFFF2BC),
-                      indicatorWeight: 7,
+                      indicatorWeight: 5,
                       tabs: [
                         Tab(
                           icon: Icon(Icons.phone),

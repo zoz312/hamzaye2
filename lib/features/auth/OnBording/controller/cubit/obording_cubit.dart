@@ -14,7 +14,7 @@ class ObordingCubit extends Cubit<ObordingState> {
   PageController pagecontroller = PageController();
   void onChangeNext() {
     pagecontroller.nextPage(
-        duration: Duration(seconds: 2), curve: Curves.linear);
+        duration: Duration(milliseconds: 500), curve: Curves.linear);
   }
   void onChangeSkip(BuildContext context)async{
     SharedPreferences sharedpreferences = await SharedPreferences.getInstance();

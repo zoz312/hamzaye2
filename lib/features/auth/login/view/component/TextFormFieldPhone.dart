@@ -16,6 +16,7 @@ class TextFormFieldPhone2 extends StatelessWidget {
       child: BlocBuilder<LoginCubit, LoginState>(
         builder: (context, state) {
           return TextFormField(
+            strutStyle: StrutStyle(height:MediaQuery.of(context).size.height/500 ),
             keyboardType: TextInputType.phone,
             controller: controller.phone,
             autovalidateMode: AutovalidateMode.onUserInteraction,
