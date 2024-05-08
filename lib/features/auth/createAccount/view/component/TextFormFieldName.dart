@@ -14,7 +14,7 @@ class TextFormFieldName extends StatelessWidget {
         child: BlocBuilder<CreateAccountCubit, CreateAccountState>(
           builder: (context, state) {
             return TextFormField(
-              controller: controller.phone,
+              controller: controller.name,
               autovalidateMode: AutovalidateMode.onUserInteraction,
               strutStyle: StrutStyle(height:MediaQuery.of(context).size.height/500 ),
               decoration: InputDecoration(

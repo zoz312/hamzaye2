@@ -15,7 +15,10 @@ class Dashboard extends StatelessWidget {
         builder: (context, state) {
           DashboardCubit controller = context.read<DashboardCubit>();
           return Scaffold(
-            appBar: AppBar(actions: [
+            appBar: AppBar(
+              centerTitle: true,
+              title: Text('Order'),
+              actions: [
               IconButton(
                   onPressed: () {
                     Navigator.pushNamed(context, 'newfood');
@@ -28,7 +31,7 @@ class Dashboard extends StatelessWidget {
                 onPageChanged: controller.onChangeTabIndex,
                 children: [
                   foodPage(),
-                  Center(child: Text("home 2")),
+                 
                   Center(child: Text("Services 3"))
                 ]),
             bottomNavigationBar: BottomNavigationBar(
@@ -42,11 +45,10 @@ class Dashboard extends StatelessWidget {
                 selectedItemColor: Color(0xffFFF2BC),
                 items: [
                   BottomNavigationBarItem(
-                      icon: Icon(Icons.food_bank_outlined), label: '1'),
+                      icon: Icon(Icons.food_bank), label: '1'),
+                
                   BottomNavigationBarItem(
-                      icon: Icon(Icons.favorite), label: '2'),
-                  BottomNavigationBarItem(
-                      icon: Icon(CupertinoIcons.cart), label: '3')
+                      icon: Icon(CupertinoIcons.cart), label: '2')
                 ]),
           );
         },

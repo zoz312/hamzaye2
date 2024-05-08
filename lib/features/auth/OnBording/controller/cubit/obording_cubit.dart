@@ -25,10 +25,7 @@ class ObordingCubit extends Cubit<ObordingState> {
   List data = [
     OnbordingModel(image: 'assets/Egyptianfood.jpg', title: 'Egyptian food'),
     OnbordingModel(image: 'assets/Italianfood.jpg', title: 'Italian food'),
-    OnbordingModel(
-      image: 'assets/Arabicfood.jpg',
-      title: 'Arabic food',
-    ),
+    OnbordingModel(image: 'assets/Arabicfood.jpg',  title: 'Arabic food',),
     OnbordingModel(image: 'assets/Fastfood.jpg', title: 'Fast food'),
     OnbordingModel(image: 'assets/Drinks.jpg', title: 'Drinks'),
   ];
