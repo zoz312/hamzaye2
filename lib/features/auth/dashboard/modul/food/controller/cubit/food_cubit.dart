@@ -10,7 +10,9 @@ import '../../model/rebo/databaseRepo.dart';
 part 'food_state.dart';
 
 class FoodCubit extends Cubit<FoodState> {
+    static FoodCubit instance = FoodCubit();
   FoodCubit() : super(Foodloading()) {
+   
     init();
   }
   List<FoodModel> food = [];
@@ -35,9 +37,9 @@ class FoodCubit extends Cubit<FoodState> {
     emit(Foodloaded());
   }
 
-  void addcart(int id, int value) {
+ /* void addcart(int id, int value) {
     repo.updatcart(value, id);
     init();
     emit(Foodloaded());
-  }
+  }*/
 }

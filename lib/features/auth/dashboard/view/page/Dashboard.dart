@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hamzawyapp/features/auth/dashboard/controller/cubit/dashboard_cubit.dart';
-import 'package:hamzawyapp/features/auth/dashboard/modul/food/view/page/food.dart';
+import 'package:hamzawyapp/features/auth/dashboard/modul/favortie/view/page/favoritepage.dart';
+
+import '../../modul/food/view/page/food.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
@@ -26,7 +28,7 @@ class Dashboard extends StatelessWidget {
                 children: [
                   foodPage(),
                  
-                  Center(child: Text("Services 3"))
+                 favoritepage()
                 ]),
             bottomNavigationBar: BottomNavigationBar(
                 backgroundColor: Color(0xffD84012),

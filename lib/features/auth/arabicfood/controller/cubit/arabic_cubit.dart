@@ -16,40 +16,41 @@ class ArabicCubit extends Cubit<ArabicState> {
         image: 'assets/Egyptianfood.jpg',
         name: 'molokhia',
         descripction: 'egyption food',
-        price: "\$110"),
+        price: 110),
     arabicmodel(
         image: 'assets/kabab.jpg',
         name: 'Kebab',
         descripction: 'egyption food',
-        price: "\$300"),
+        price: 300),
     arabicmodel(
         image: 'assets/hawashe.jpg',
         name: 'Hawawshi',
         descripction: 'egyption food',
-        price: "\$10"),
+        price: 10),
     arabicmodel(
         image: 'assets/sbank.jpg',
         name: 'spinach',
         descripction: 'egyption food',
-        price: "\$40"),
+        price: 40),
     arabicmodel(
         image: 'assets/tabek.jpg',
         name: 'Lopea',
         descripction: 'egyption food',
-        price: "\$30"),
+        price: 30),
     arabicmodel(
         image: 'assets/hamam.jpg',
         name: 'dove',
         descripction: 'egyption food',
-        price: "\$1000"),
+        price: 1000),
   ];
 
   List<FoodModel> food = [];
   databaserepo repo = databaserepo();
 
-  Future<void> init(String name,String des,int qu) async {
+  Future<void> init(String name, String des, int price) async {
     await repo.initDB();
-    repo.insertfood(name, des, 0, qu, Uint8List(10));
+   
+    repo.insertfood(name, des, 1, price, Uint8List(10));
     emit(ArabicInitial());
 
     food = await repo.fatchfood();

@@ -2,20 +2,17 @@ import 'dart:developer';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hamzawyapp/features/auth/dashboard/modul/favortie/controller/cubit/favorite_cubit.dart';
 import 'package:hamzawyapp/features/auth/dashboard/modul/food/controller/cubit/food_cubit.dart';
 import 'package:hamzawyapp/features/auth/dashboard/modul/food/model/QuntityModel/qunmod.dart';
 
-
-class bodyfood extends StatelessWidget {
-   
-  const bodyfood(
+class bodyfavo extends StatelessWidget {
+  const bodyfavo(
       {super.key, required this.foodModel, required this.controller});
   final FoodModel foodModel;
-  final FoodCubit controller;
-  
+  final FavoriteCubit controller;
   @override
   Widget build(BuildContext context) {
-    int cont = 0 ;
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: DecoratedBox(
@@ -52,7 +49,7 @@ class bodyfood extends StatelessWidget {
                                   fontSize: 20, color: Color(0xffD84012))),
                         ],
                       ),
-                      Text((cont ?? 0).toString(),
+                      Text((foodModel.que ?? 0).toString(),
                           style: TextStyle(
                               fontSize: 20, color: Color(0xffD84012))),
                     ],
@@ -78,44 +75,15 @@ class bodyfood extends StatelessWidget {
                       } else {
                         controller.addfav(foodModel.id ?? 0, 1);
                       }
-                      print('id ' + '${foodModel.id}');
-                      print('f ' + '${foodModel.fav}');
+                      print('id '+ '${foodModel.id}');
+                      print('f '+ '${foodModel.fav}');
                     },
                   ),
-                  Container(
-                    width: .5,
-                    height: 50,
-                    color: Colors.black,
-                  ),
-                  IconButton(
-                    onPressed: () {
-                       cont = (foodModel.que)! + 1;
-                    },
-                    icon: Icon(CupertinoIcons.add),
-                  ),
-                  Container(
-                    width: .5,
-                    height: 50,
-                    color: Colors.black,
-                  ),
-                  IconButton(
-                    onPressed: () {
-                       cont = (foodModel.que)! - 1;
-                    },
-                    icon: Icon(CupertinoIcons.minus),
-                  )
-                  /*  InkWell(
-                    child: foodModel.fav == 1
-                        ? const Icon(CupertinoIcons.cart,color: Colors.blue)
-                        : const Icon(CupertinoIcons.cart,color: Colors.blue),
-                    onTap: () {
-                      if(foodModel.cart ==1){
-                      controller.addcart(foodModel.id ?? 0,0);}
-                     else{
-                      controller.addcart(foodModel.id ?? 0,1);
-                     }
-                    },
-                  ),*/
+                
+
+ 
+
+               
                 ],
               )
             ],
