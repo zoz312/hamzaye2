@@ -2,15 +2,18 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 //import 'package:hamzawyapp/features/auth/ForgetPasswod/view/page/forget.dart';
 import 'package:hamzawyapp/features/auth/OnBording/view/page/OnBording.dart';
-import 'package:hamzawyapp/features/auth/dashboard/modul/newfood/view/page/newfoodpage.dart';
 import 'package:hamzawyapp/features/auth/dashboard/view/page/Dashboard.dart';
 import 'package:hamzawyapp/features/auth/NewPassword/view/page/NewPassword.dart';
 import 'package:hamzawyapp/features/auth/createAccount/view/page/CreateAccount.dart';
+import 'package:hamzawyapp/features/auth/drinks/view/page/pagedrinks.dart';
+import 'package:hamzawyapp/features/auth/fastfood/view/page/pagefast.dart';
 import 'package:hamzawyapp/features/auth/italinfood/view/page/pageitalin.dart';
+
 import 'package:hamzawyapp/features/auth/verification/view/page/verification.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 import 'features/auth/ForgetPasswod/view/page/forget.dart';
+import 'features/auth/arabicfood/view/page/pagearabic.dart';
 import 'features/auth/login/view/page/LoginPage.dart';
 import 'features/auth/mainapp/view/page/mainapp_page.dart';
 
@@ -66,6 +69,19 @@ class Myroute {
       case 'itailn':
         return MaterialPageRoute<dynamic>(
             builder: (BuildContext context) => itailnfood());
+             case 'abric':
+        return MaterialPageRoute<dynamic>(
+            builder: (BuildContext context) => ArabicFood());
+             case 'drink':
+        return MaterialPageRoute<dynamic>(
+            builder: (BuildContext context) => Drinks());
+              case 'fast':
+        return MaterialPageRoute<dynamic>(
+            builder: (BuildContext context) => FastFood());
+            case 'ord':
+        return MaterialPageRoute<dynamic>(
+            builder: (BuildContext context) => Dashboard());
+            
       default:
         return MaterialPageRoute<dynamic>(
             builder: (BuildContext context) => const OnBording());

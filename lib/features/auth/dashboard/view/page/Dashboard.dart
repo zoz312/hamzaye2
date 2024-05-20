@@ -18,13 +18,7 @@ class Dashboard extends StatelessWidget {
             appBar: AppBar(
               centerTitle: true,
               title: Text('Order'),
-              actions: [
-              IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, 'newfood');
-                  },
-                  icon: Icon(CupertinoIcons.add))
-            ], backgroundColor: Color(0xffD84012)),
+               backgroundColor: Color(0xffD84012)),
             backgroundColor: Color(0xffFFF2BC),
             body: PageView(
                 controller: controller.pagecontroller,
@@ -45,10 +39,10 @@ class Dashboard extends StatelessWidget {
                 selectedItemColor: Color(0xffFFF2BC),
                 items: [
                   BottomNavigationBarItem(
-                      icon: Icon(Icons.food_bank), label: '1'),
+                        icon: Icon(CupertinoIcons.cart), label: '1'),
                 
                   BottomNavigationBarItem(
-                      icon: Icon(CupertinoIcons.cart), label: '2')
+                      icon: Icon(CupertinoIcons.heart), label: '2')
                 ]),
           );
         },

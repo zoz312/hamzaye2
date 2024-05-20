@@ -16,10 +16,10 @@ class itailnfood extends StatelessWidget {
           return Scaffold(
             appBar: AppBar(
               backgroundColor: Color(0xffD84012),
-              title: Text('Italian food'),
+              title: Text('Italian Food'),
             ),
             backgroundColor: Color(0xffFFF2BC),
-            body: bodyit(controller: controller,),
+            body: bodyitalian(controller: controller,),
           );
         },
       ),

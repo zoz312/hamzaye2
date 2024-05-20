@@ -18,7 +18,7 @@ class FoodCubit extends Cubit<FoodState> {
 
   Future<void> init() async {
     await repo.initDB();
-    repo.insertfood('name', 'des', 0, 98, Uint8List(10));
+    //repo.insertfood('name', 'des', 0, 98, Uint8List(10));
     emit(Foodloading());
 
     food = await repo.fatchfood();

@@ -19,7 +19,7 @@ class verification_page extends StatelessWidget {
             body:  body_verification(controller: controller,),
             appBar: AppBar(
               title: const Text(
-                'Vrification',
+                'Verification',
                 style: TextStyle(color: Color(0xffFFF2BC)),
               ),
               backgroundColor: Color(0xffD84012),

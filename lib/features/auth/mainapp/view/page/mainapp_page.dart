@@ -1,6 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 
 import '../../controller/cubit/mainapp_cubit.dart';
 import '../component/bodymain.dart';
@@ -20,9 +20,18 @@ class MainappPage extends StatelessWidget {
                 centerTitle: true,
                 title: Text('hamzawy'),
                 backgroundColor: Color(0xffD84012),
+                actions: [
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'ord');
+                      },
+                      icon: Icon(CupertinoIcons.cart))
+                ],
               ),
               backgroundColor: Color(0xffFFF2BC),
-              body: mainbody(controller: controller,));
+              body: mainbody(
+                controller: controller,
+              ));
         },
       ),
     );

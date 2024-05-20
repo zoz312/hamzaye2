@@ -11,8 +11,8 @@ class MainappCubit extends Cubit<MainappState> {
  List data = [
   
      mainModel(image: 'assets/Italianfood.jpg', title: 'Italian food',route:'itailn'),
-     mainModel(image: 'assets/Arabicfood.jpg',  title: 'Arabic food',route:'itailn'),
-     mainModel(image: 'assets/Fastfood.jpg', title: 'Fast food',route:'itailn'),
-    mainModel(image: 'assets/Drinks.jpg', title: 'Drinks',route:'itailn'),
+     mainModel(image: 'assets/Arabicfood.jpg',  title: 'Arabic food',route:'abric'),
+     mainModel(image: 'assets/Fastfood.jpg', title: 'Fast food',route:'fast'),
+    mainModel(image: 'assets/Drinks.jpg', title: 'Drinks',route:'drink'),
   ];
 }
