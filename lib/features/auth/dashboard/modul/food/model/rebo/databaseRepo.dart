@@ -9,7 +9,7 @@ class databaserepo {
 Future  <void> initDB() async {
     myobjectdb = await openDatabase(
       (await getDatabasesPath()) + '/productDB.db',
-      version: 1,
+      version: 2,
       onCreate: (db, version) async {
         await db.execute('''
          CREATE TABLE Food (

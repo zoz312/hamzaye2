@@ -6,8 +6,8 @@ import 'package:hamzawyapp/core/TextFormFieldPassword.dart';
 import 'package:hamzawyapp/core/TextFormFieldPhone.dart';
 import 'package:hamzawyapp/features/auth/createAccount/controller/cubit/create_account_cubit.dart';
 import 'package:hamzawyapp/features/auth/createAccount/view/component/bodyCreateAccount.dart';
-import 'package:hamzawyapp/features/auth/createAccount/view/component/ButtonSinup.dart';
-import 'package:hamzawyapp/features/auth/createAccount/view/component/TextFormFieldName.dart';
+
+
 
 import '../../../../../core/Emailvaild.dart';
 import '../../../../../core/MyVaidPass.dart';
