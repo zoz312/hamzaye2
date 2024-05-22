@@ -24,19 +24,20 @@ class bodyLogin extends StatelessWidget {
       child: BlocBuilder<LoginCubit, LoginState>(
         builder: (context, state) {
           return Container(
-            color: const Color(0xffFFF2BC),
+            color:           
+            Theme.of(context).backgroundColor,
             padding: const EdgeInsets.all(20.0),
             child: TabBarView(
               children: [
                 Form(
                     child: ListView(
                   children: [
-                    image3(),
+                   
                     TextFormFieldPhone2(controller: controller,),
                     const SizedBox(
                       height: 20.0,
                     ),
-                    TextFormFieldPassword(text: 'password'),
+                    TextFormFieldPassword2(text: 'password', controller: controller,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -56,7 +57,7 @@ class bodyLogin extends StatelessWidget {
                 Form(
                     child: ListView(
                   children: [
-                    image3(),
+                  
                     TextFormFieldEmail2(controller: controller,),
                      SizedBox(
                       height:MediaQuery.of(context).size.height/30, 

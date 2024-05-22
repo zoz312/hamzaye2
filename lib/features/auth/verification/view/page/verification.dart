@@ -18,14 +18,13 @@ class verification_page extends StatelessWidget {
           return Scaffold(
             body:  body_verification(controller: controller,),
             appBar: AppBar(
-              title: const Text(
+              title:  Text(
                 'Verification',
-                style: TextStyle(color: Color(0xffFFF2BC)),
+                style:Theme.of(context).appBarTheme.titleTextStyle,
               ),
-              backgroundColor: Color(0xffD84012),
-              elevation: 0,
-            ),
-            backgroundColor: Color(0xffFFF2BC),
+                backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+              ),
+              backgroundColor:  Theme.of(context).backgroundColor,
           );
         },
       ),

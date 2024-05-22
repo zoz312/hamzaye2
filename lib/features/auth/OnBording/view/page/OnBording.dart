@@ -17,7 +17,8 @@ class OnBording extends StatelessWidget {
               builder: (context, state) {
             ObordingCubit controller = context.read<ObordingCubit>();
             return Scaffold(
-              backgroundColor: Color(0xffFFF2BC),
+                              
+              backgroundColor:  Theme.of(context).backgroundColor,
               body: bodyOnbording(controller: controller,),
               bottomNavigationBar: ButtonOnbording(controller: controller,),
             );

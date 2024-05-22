@@ -25,14 +25,14 @@ class TextFormFieldEmail2 extends StatelessWidget {
             strutStyle: StrutStyle(height:MediaQuery.of(context).size.height/500 ),
             decoration: InputDecoration(
                 label: Text("Email"),
-                labelStyle: TextStyle(color: Colors.black, fontSize: 20),
+                labelStyle: TextStyle(color: Color.fromARGB(255, 78, 77, 77), fontSize: 20),
                 suffixIcon: Icon(Icons.email),
                 iconColor: Colors.black,
                 floatingLabelBehavior: FloatingLabelBehavior.always,
                 filled: true,
                 enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: const Color(0xffD84012),
+                      color: Theme.of(context).cardColor,
                       width: 3,
                     ),
                     borderRadius: BorderRadius.circular(10)),
@@ -40,13 +40,13 @@ class TextFormFieldEmail2 extends StatelessWidget {
                 fillColor: Colors.white,
                 border: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: const Color(0xffD84012),
+                      color: Theme.of(context).cardColor,
                       width: 3,
                     ),
                     borderRadius: BorderRadius.circular(10)),
                 focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: const Color(0xffD84012),
+                      color: Theme.of(context).cardColor,
                       width: 3,
                     ),
                     borderRadius: BorderRadius.circular(10)),

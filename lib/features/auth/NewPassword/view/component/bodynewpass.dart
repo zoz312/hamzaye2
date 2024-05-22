@@ -22,12 +22,16 @@ class bodynewpass extends StatelessWidget {
           return ListView(
             padding: EdgeInsets.symmetric(horizontal: 5, vertical: 29),
             children: [
+             
              Text("NEW CREDENTIALS",style: TextStyle(fontSize: MediaQuery.of(context).size.height/20),),
            
             Text("Password must be at last 8 characters long.Password must contain at least one upper case.One lower case letter.Password must contain at least one number or special character"
     ,style: TextStyle(fontSize: MediaQuery.of(context).size.height/40),)
             ,
-              image5(),
+            SizedBox(
+                height: MediaQuery.of(context).size.height/3,
+              ),
+            //  image5(),
               TextFormFieldPassword3(
                 text: "New Password",
                 controller: contoller,

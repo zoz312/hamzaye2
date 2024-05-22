@@ -1,5 +1,8 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hamzawyapp/core/cubit/pernet_cubit.dart';
+import 'package:hamzawyapp/core/theme.dart';
 //import 'package:hamzawyapp/features/auth/ForgetPasswod/view/page/forget.dart';
 import 'package:hamzawyapp/features/auth/OnBording/view/page/OnBording.dart';
 import 'package:hamzawyapp/features/auth/dashboard/view/page/Dashboard.dart';
@@ -8,6 +11,7 @@ import 'package:hamzawyapp/features/auth/createAccount/view/page/CreateAccount.d
 import 'package:hamzawyapp/features/auth/drinks/view/page/pagedrinks.dart';
 import 'package:hamzawyapp/features/auth/fastfood/view/page/pagefast.dart';
 import 'package:hamzawyapp/features/auth/italinfood/view/page/pageitalin.dart';
+import 'package:hamzawyapp/features/auth/satting/view/page/satting.dart';
 
 import 'package:hamzawyapp/features/auth/verification/view/page/verification.dart';
 
@@ -21,20 +25,32 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences sharedpreferences = await SharedPreferences.getInstance();
   bool onbording = sharedpreferences.getBool('onbording') ?? false;
-  MaterialApp materialapp = MaterialApp(
-      debugShowCheckedModeBanner: false,
-      builder: DevicePreview.appBuilder,
-      // useInheritedMediaQuery: true,
-      onGenerateRoute: Myroute.onGenerateRoute,
-      onGenerateInitialRoutes: (_) => Myroute.initr);
-  runApp(
-    //DevicePreview(
-    // enabled: true,
 
-    // builder: (context) =>
-    materialapp,
-    // ),
-  );
+  runApp(materialapp());
+}
+
+class materialapp extends StatelessWidget {
+  const materialapp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider<PernetCubit>(
+      create: (context) => PernetCubit(),
+      child: BlocBuilder<PernetCubit, PernetState>(
+        builder: (context, state) {
+          return MaterialApp(
+              debugShowCheckedModeBanner: false,
+              theme: mytheme.insatance.light,
+              darkTheme: mytheme.insatance.dark,
+               themeMode: PernetCubit.instance.themeMode,
+              builder: DevicePreview.appBuilder,
+              // useInheritedMediaQuery: true,
+              onGenerateRoute: Myroute.onGenerateRoute,
+              onGenerateInitialRoutes: (_) => Myroute.initr);
+        },
+      ),
+    );
+  }
 }
 
 class Myroute {
@@ -42,7 +58,7 @@ class Myroute {
     MaterialPageRoute<dynamic>(
         builder: (BuildContext context) => const OnBording()),
     MaterialPageRoute<dynamic>(
-      builder: (BuildContext context) => const MainappPage(),
+      builder: (BuildContext context) => const CreateAccount(),
     )
   ];
 
@@ -69,19 +85,21 @@ class Myroute {
       case 'itailn':
         return MaterialPageRoute<dynamic>(
             builder: (BuildContext context) => itailnfood());
-             case 'abric':
+      case 'abric':
         return MaterialPageRoute<dynamic>(
             builder: (BuildContext context) => ArabicFood());
-             case 'drink':
+      case 'drink':
         return MaterialPageRoute<dynamic>(
             builder: (BuildContext context) => Drinks());
-              case 'fast':
+      case 'fast':
         return MaterialPageRoute<dynamic>(
             builder: (BuildContext context) => FastFood());
-            case 'ord':
+      case 'ord':
         return MaterialPageRoute<dynamic>(
             builder: (BuildContext context) => Dashboard());
-            
+      case 'se':
+        return MaterialPageRoute<dynamic>(
+            builder: (BuildContext context) => Settings());
       default:
         return MaterialPageRoute<dynamic>(
             builder: (BuildContext context) => const OnBording());

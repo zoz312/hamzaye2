@@ -24,22 +24,22 @@ class ButtonOnbording extends StatelessWidget {
                     },
                     child: Text(
                       'Skip',
-                      style: TextStyle(color: Color(0xffFFF2BC), fontSize: 18),
+                      style: TextStyle(color: Theme.of(context).backgroundColor, fontSize: 18),
                     ),
                     style: ButtonStyle(
                         backgroundColor:
-                            MaterialStatePropertyAll(Color(0xffD84012)),
+                            MaterialStatePropertyAll(Theme.of(context).cardColor),
                         shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50))))),
                 TextButton(
                     onPressed: controller.onChangeNext,
                     child: Text(
                       'Next',
-                      style: TextStyle(color: Color(0xffFFF2BC), fontSize: 18),
+                      style: TextStyle(color: Theme.of(context).backgroundColor, fontSize: 18),
                     ),
                     style: ButtonStyle(
                         backgroundColor:
-                            MaterialStatePropertyAll(Color(0xffD84012)),
+                            MaterialStatePropertyAll(Theme.of(context).cardColor),
                         shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50)))))
               ],

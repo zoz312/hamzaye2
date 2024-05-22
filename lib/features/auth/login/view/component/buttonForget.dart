@@ -13,7 +13,7 @@ class forgetButton extends StatelessWidget {
           "Forget Passwod ?",
           style: TextStyle(
               fontSize: 18,
-              color: Color(0xffD84012),
+              color: Theme.of(context).cardColor,
               decoration: TextDecoration.underline),
         ));
   }

@@ -16,11 +16,10 @@ class FastFood extends StatelessWidget {
         builder: (context, state) {
           FastCubit controller = context.read<FastCubit>();
           return Scaffold(
-            appBar: AppBar(
-              backgroundColor: Color(0xffD84012),
-              title: Text('Fast Food'),
-            ),
-            backgroundColor: Color(0xffFFF2BC),
+            appBar: AppBar( title: Text('Fast Food'),
+                             backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+              ),
+              backgroundColor:  Theme.of(context).backgroundColor,
             body: BodyFast(controller: controller),
           );
         },

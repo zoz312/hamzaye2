@@ -36,7 +36,11 @@ class FoodCubit extends Cubit<FoodState> {
     init();
     emit(Foodloaded());
   }
-
+void delte(int id) {
+    repo.delete(id);
+    init();
+    emit(Foodloaded());
+  }
  /* void addcart(int id, int value) {
     repo.updatcart(value, id);
     init();

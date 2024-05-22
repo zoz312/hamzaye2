@@ -17,7 +17,7 @@ class bodyfavo extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: DecoratedBox(
         decoration: BoxDecoration(
-            color: Color(0xffFFF2BC), borderRadius: BorderRadius.circular(30)),
+            color: Theme.of(context).cardColor, borderRadius: BorderRadius.circular(30)),
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
@@ -30,10 +30,10 @@ class bodyfavo extends StatelessWidget {
                       Text(
                         foodModel.name ?? 'rezo',
                         style:
-                            TextStyle(fontSize: 20, color: Color(0xffD84012)),
+                            TextStyle(fontSize: 20, color: Colors.white),
                       ),
                       Text(foodModel.desc ?? 'yameeee',
-                          style: TextStyle(fontSize: 15, color: Colors.grey)),
+                          style: TextStyle(fontSize: 15, color: Colors.white)),
                     ],
                   ),
                   Spacer(),
@@ -43,15 +43,15 @@ class bodyfavo extends StatelessWidget {
                         children: [
                           Text('\$',
                               style: TextStyle(
-                                  fontSize: 20, color: Color(0xffD84012))),
+                                  fontSize: 20, color: Colors.white)),
                           Text((foodModel.ava ?? 0).toString(),
                               style: TextStyle(
-                                  fontSize: 20, color: Color(0xffD84012))),
+                                  fontSize: 20, color: Colors.white)),
                         ],
                       ),
                       Text((foodModel.que ?? 0).toString(),
                           style: TextStyle(
-                              fontSize: 20, color: Color(0xffD84012))),
+                              fontSize: 20, color: Colors.white)),
                     ],
                   ),
                 ],

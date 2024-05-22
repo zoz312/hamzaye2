@@ -15,10 +15,12 @@ class itailnfood extends StatelessWidget {
           ItailenCubit controller = context.read<ItailenCubit>();
           return Scaffold(
             appBar: AppBar(
-              backgroundColor: Color(0xffD84012),
+                             backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+              
               title: Text('Italian Food'),
             ),
-            backgroundColor: Color(0xffFFF2BC),
+                
+              backgroundColor:  Theme.of(context).backgroundColor,
             body: bodyitalian(controller: controller,),
           );
         },

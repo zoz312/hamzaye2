@@ -17,7 +17,7 @@ class favoritepage extends StatelessWidget {
         builder: (context, state) {
           final FavoriteCubit controller = context.read<FavoriteCubit>();
           return Scaffold(
-            backgroundColor: Color(0xffD84012),
+            backgroundColor: Theme.of(context).backgroundColor,
             body:state is Foodloading?
             const Center(child:  CircularProgressIndicator(backgroundColor:  Color(0xffFFF2BC),color: Color.fromARGB(255, 221, 216, 215),),):
             state is Foodempty ?

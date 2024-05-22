@@ -18,7 +18,7 @@ class BodyDrinks extends StatelessWidget {
              return Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Color(0xffD84012),
+                  color: Theme.of(context).cardColor,
                 ),
                 margin: EdgeInsets.all(20),
                 padding: EdgeInsets.only(right: 30),

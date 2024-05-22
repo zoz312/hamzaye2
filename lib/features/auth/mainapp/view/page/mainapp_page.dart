@@ -19,16 +19,23 @@ class MainappPage extends StatelessWidget {
               appBar: AppBar(
                 centerTitle: true,
                 title: Text('hamzawy'),
-                backgroundColor: Color(0xffD84012),
+                            backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+              
                 actions: [
                   IconButton(
                       onPressed: () {
                         Navigator.pushNamed(context, 'ord');
                       },
                       icon: Icon(CupertinoIcons.cart))
+             ,    IconButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'se');
+                      },
+                      icon: Icon(CupertinoIcons.settings))
                 ],
               ),
-              backgroundColor: Color(0xffFFF2BC),
+                          
+              backgroundColor:  Theme.of(context).backgroundColor,
               body: mainbody(
                 controller: controller,
               ));

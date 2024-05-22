@@ -23,8 +23,11 @@ class forget extends StatelessWidget {
                   "Forget Password",
                   style: TextStyle(color: Colors.white),
                 ),
-                backgroundColor: Color(0xffD84012),
+                               backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+             
               ),
+                      
+              backgroundColor:  Theme.of(context).backgroundColor,
               body: bodyFoget(controller: controller,));
         },
       ),

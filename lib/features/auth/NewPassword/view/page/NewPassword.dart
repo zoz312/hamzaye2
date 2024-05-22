@@ -24,11 +24,11 @@ class NewPassword extends StatelessWidget {
               appBar: AppBar(
                 title: Text(
                   "Forget PassWord ?",
-                  style: TextStyle(color: Color(0xffFFF2BC)),
+                  style: Theme.of(context).appBarTheme.titleTextStyle,
                 ),
-                backgroundColor: Color(0xffD84012),
+                              backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
               ),
-              backgroundColor: Color(0xffFFF2BC),
+              backgroundColor:  Theme.of(context).backgroundColor,
               body: bodynewpass(contoller: controller));
         },
       ),

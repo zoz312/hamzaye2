@@ -19,7 +19,7 @@ class body_verification extends StatelessWidget {
               SizedBox(
                 height: 70,
               ),
-              image3(),
+           //   image3(),
               Center(
                 child: const Text(
                   'Verify your Phone',
@@ -54,10 +54,10 @@ class body_verification extends StatelessWidget {
                 },
                 controller: controller.pin,
                 pinTheme: PinTheme(
-                  inactiveColor:Color(0xffD84012),
+                  inactiveColor:Theme.of(context).cardColor,
                   fieldOuterPadding: EdgeInsets.all(10),
-                  selectedColor:Color(0xffD84012),
-                  activeColor:Color(0xffD84012),
+                  selectedColor:Theme.of(context).cardColor,
+                  activeColor:Theme.of(context).cardColor,
                   errorBorderColor:Colors.red,
                   selectedFillColor:Colors.white,
                  inactiveFillColor:Colors.white,
@@ -103,14 +103,14 @@ class body_verification extends StatelessWidget {
                     Navigator.pushNamed(context, 'newpass');
                     controller.ontapconf();
                   },
-                  color: Color(0xffD84012),
+                  color: Theme.of(context).cardColor,
                   minWidth: 100,
                   height: 50,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(11)),
-                  child: const Text(
+                  child:  Text(
                     'Ok',
-                    style: TextStyle(fontSize: 20, color: Color(0xffFFF2BC)),
+                    style: TextStyle(fontSize: 20, color:  Theme.of(context).backgroundColor,),
                   ),
                 ),
               ),

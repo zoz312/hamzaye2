@@ -15,10 +15,12 @@ class Drinks extends StatelessWidget {
           DrinksCubit controller = context.read<DrinksCubit>();
           return Scaffold(
             appBar: AppBar(
-              backgroundColor: Color(0xffD84012),
+                             backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+            
               title: Text('Drinks'),
             ),
-            backgroundColor: Color(0xffFFF2BC),
+                      
+              backgroundColor:  Theme.of(context).backgroundColor,
             body: BodyDrinks(controller: controller)
           );
         },

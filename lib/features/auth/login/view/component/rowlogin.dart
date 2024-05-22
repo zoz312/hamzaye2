@@ -20,7 +20,7 @@ class RowLogin extends StatelessWidget {
               "Sign up",
               style: TextStyle(
                   fontSize: 18,
-                  color: Color(0xffD84012),
+                  color: Theme.of(context).cardColor,
                   decoration: TextDecoration.underline),
             ))
       ],

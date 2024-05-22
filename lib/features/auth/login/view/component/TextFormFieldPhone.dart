@@ -22,14 +22,14 @@ class TextFormFieldPhone2 extends StatelessWidget {
             autovalidateMode: AutovalidateMode.onUserInteraction,
             decoration: InputDecoration(
                 label: Text("Phone Number"),
-                labelStyle: TextStyle(color: Colors.black, fontSize: 20),
+                labelStyle: TextStyle(color: Color.fromARGB(255, 152, 118, 118), fontSize: 20),
                 suffixIcon: Icon(Icons.phone),
                 iconColor: Colors.black,
                 floatingLabelBehavior: FloatingLabelBehavior.always,
                 filled: true,
                 enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: const Color(0xffD84012),
+                      color: Theme.of(context).cardColor,
                       width: 3,
                     ),
                     borderRadius: BorderRadius.circular(10)),
@@ -37,13 +37,13 @@ class TextFormFieldPhone2 extends StatelessWidget {
                 fillColor: Colors.white,
                 border: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: const Color(0xffD84012),
+                      color: Theme.of(context).cardColor,
                       width: 3,
                     ),
                     borderRadius: BorderRadius.circular(10)),
                 focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xffD84012),
+                      color: Theme.of(context).cardColor,
                       width: 3,
                     ),
                     borderRadius: BorderRadius.circular(10)),

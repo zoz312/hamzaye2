@@ -29,26 +29,26 @@ class TextFormFieldPassword3 extends StatelessWidget {
                 filled: true,
                 labelText: "$text",
                 floatingLabelBehavior: FloatingLabelBehavior.always,
-                labelStyle: TextStyle(color: Colors.black, fontSize: 20),
+                labelStyle: TextStyle(color: const Color.fromARGB(255, 77, 76, 76), fontSize: 20),
                 hintStyle: TextStyle(
                   color: Colors.black,
                 ),
                 fillColor: Colors.white,
                 enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: const Color(0xffD84012),
+                      color:  Theme.of(context).cardColor,
                       width: 3,
                     ),
                     borderRadius: BorderRadius.circular(10)),
                 border: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: const Color.fromARGB(251, 235, 175, 9),
+                      color: Theme.of(context).cardColor,
                       width: 3,
                     ),
                     borderRadius: BorderRadius.circular(10)),
                 focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromARGB(251, 235, 175, 9),
+                      color: Theme.of(context).cardColor,
                       width: 3,
                     ),
                     borderRadius: BorderRadius.circular(10)),

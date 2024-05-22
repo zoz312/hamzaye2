@@ -20,8 +20,9 @@ class Dashboard extends StatelessWidget {
             appBar: AppBar(
               centerTitle: true,
               title: Text('Order'),
-               backgroundColor: Color(0xffD84012)),
-            backgroundColor: Color(0xffFFF2BC),
+                              backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+              ),
+              backgroundColor:  Theme.of(context).backgroundColor,
             body: PageView(
                 controller: controller.pagecontroller,
                 onPageChanged: controller.onChangeTabIndex,
@@ -31,14 +32,14 @@ class Dashboard extends StatelessWidget {
                  favoritepage()
                 ]),
             bottomNavigationBar: BottomNavigationBar(
-                backgroundColor: Color(0xffD84012),
+                backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
                 showSelectedLabels: true,
                 onTap: controller.onChangeTabIndex,
                 currentIndex: controller.SelectTapIndex,
                 unselectedItemColor: Colors.black,
                 unselectedLabelStyle:
                     TextStyle(fontSize: 15, color: Colors.redAccent),
-                selectedItemColor: Color(0xffFFF2BC),
+                selectedItemColor: Colors.white,
                 items: [
                   BottomNavigationBarItem(
                         icon: Icon(CupertinoIcons.cart), label: '1'),

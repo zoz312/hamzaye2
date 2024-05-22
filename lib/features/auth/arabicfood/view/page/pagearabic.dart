@@ -15,10 +15,12 @@ class ArabicFood extends StatelessWidget {
           ArabicCubit controller = context.read<ArabicCubit>();
           return Scaffold(
             appBar: AppBar(
-              backgroundColor: Color(0xffD84012),
+               backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+              
               title: Text('Arabic food'),
             ),
-            backgroundColor: Color(0xffFFF2BC),
+                     
+              backgroundColor:  Theme.of(context).backgroundColor,
             body: BodyArabic(controller: controller,),
           );
         },

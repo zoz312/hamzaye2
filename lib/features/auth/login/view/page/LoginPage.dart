@@ -18,15 +18,16 @@ class Login extends StatelessWidget {
               length: 2,
               child: Scaffold(
                   appBar: AppBar(
-                    backgroundColor: Color(0xffD84012),
-                    title: const Text(
+                                    backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+            
+                    title:  Text(
                       "Login",
-                      style: TextStyle(color: Color(0xffFFF2BC)),
+                      style: Theme.of(context).appBarTheme.titleTextStyle,
                     ),
-                    bottom: const TabBar(
-                      labelColor: Color(0xffFFF2BC),
-                      unselectedLabelColor: Color(0xffFFF2BC),
-                      indicatorColor: Color(0xffFFF2BC),
+                    bottom:  TabBar(
+                      labelColor: Theme.of(context).backgroundColor,
+                      unselectedLabelColor: Theme.of(context).backgroundColor,
+                      indicatorColor: Theme.of(context).backgroundColor,
                       indicatorWeight: 5,
                       tabs: [
                         Tab(

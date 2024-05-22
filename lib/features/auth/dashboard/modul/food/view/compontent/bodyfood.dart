@@ -5,22 +5,21 @@ import 'package:flutter/material.dart';
 import 'package:hamzawyapp/features/auth/dashboard/modul/food/controller/cubit/food_cubit.dart';
 import 'package:hamzawyapp/features/auth/dashboard/modul/food/model/QuntityModel/qunmod.dart';
 
-
 class bodyfood extends StatelessWidget {
-   
   const bodyfood(
       {super.key, required this.foodModel, required this.controller});
   final FoodModel foodModel;
   final FoodCubit controller;
-  
+
   @override
   Widget build(BuildContext context) {
-    int cont = 0 ;
+    int cont = 0;
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: DecoratedBox(
         decoration: BoxDecoration(
-            color: Color(0xffFFF2BC), borderRadius: BorderRadius.circular(30)),
+            color: Theme.of(context).cardColor,
+            borderRadius: BorderRadius.circular(30)),
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
@@ -32,11 +31,10 @@ class bodyfood extends StatelessWidget {
                     children: [
                       Text(
                         foodModel.name ?? 'rezo',
-                        style:
-                            TextStyle(fontSize: 20, color: Color(0xffD84012)),
+                        style: TextStyle(fontSize: 20, color: Colors.white),
                       ),
                       Text(foodModel.desc ?? 'yameeee',
-                          style: TextStyle(fontSize: 15, color: Colors.grey)),
+                          style: TextStyle(fontSize: 15, color: Colors.white)),
                     ],
                   ),
                   Spacer(),
@@ -45,16 +43,15 @@ class bodyfood extends StatelessWidget {
                       Row(
                         children: [
                           Text('\$',
-                              style: TextStyle(
-                                  fontSize: 20, color: Color(0xffD84012))),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text((foodModel.ava ?? 0).toString(),
-                              style: TextStyle(
-                                  fontSize: 20, color: Color(0xffD84012))),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                         ],
                       ),
-                      Text((cont ?? 0).toString(),
-                          style: TextStyle(
-                              fontSize: 20, color: Color(0xffD84012))),
+                      Text((foodModel.que ?? 0).toString(),
+                          style: TextStyle(fontSize: 20, color: Colors.white)),
                     ],
                   ),
                 ],
@@ -69,9 +66,9 @@ class bodyfood extends StatelessWidget {
                   InkWell(
                     child: foodModel.fav == 1
                         ? const Icon(CupertinoIcons.heart_fill,
-                            color: Color(0xffD84012))
+                            color: Colors.white)
                         : const Icon(CupertinoIcons.heart,
-                            color: Color(0xffD84012)),
+                            color: Colors.white),
                     onTap: () {
                       if (foodModel.fav == 1) {
                         controller.addfav(foodModel.id ?? 0, 0);
@@ -87,22 +84,12 @@ class bodyfood extends StatelessWidget {
                     height: 50,
                     color: Colors.black,
                   ),
+                 
                   IconButton(
                     onPressed: () {
-                       cont = (foodModel.que)! + 1;
+                      controller.delte(foodModel.id ?? 0);
                     },
-                    icon: Icon(CupertinoIcons.add),
-                  ),
-                  Container(
-                    width: .5,
-                    height: 50,
-                    color: Colors.black,
-                  ),
-                  IconButton(
-                    onPressed: () {
-                       cont = (foodModel.que)! - 1;
-                    },
-                    icon: Icon(CupertinoIcons.minus),
+                    icon: Icon(CupertinoIcons.delete),
                   )
                   /*  InkWell(
                     child: foodModel.fav == 1

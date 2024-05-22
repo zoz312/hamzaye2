@@ -78,7 +78,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
-
+    - assets/lang/
 
 flutter_native_splash:
     color: "FFF2BC" 

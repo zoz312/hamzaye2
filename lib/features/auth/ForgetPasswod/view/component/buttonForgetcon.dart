@@ -11,10 +11,10 @@ class buttonForgetcon extends StatelessWidget {
         },
         child: Text(
           "Confim",
-          style: TextStyle(color: Color(0xffFFF2BC), fontSize: 18),
+          style: TextStyle(color: Theme.of(context).backgroundColor, fontSize: 18),
         ),
         style: ButtonStyle(
-            backgroundColor: MaterialStatePropertyAll(Color(0xffD84012)),
+            backgroundColor: MaterialStatePropertyAll(Theme.of(context).cardColor),
             shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(50)))));
   }
